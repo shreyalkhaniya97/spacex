@@ -5,18 +5,16 @@ import SideBar from "../Sidebar/Sidebar";
 import "./index.scss";
 
 export default () => {
-  const url = useState("https://api.spaceXdata.com/v3/launches?limit=100");
-
-  const fetchmissionData = async () => {
-    const result = await axios.get(url, {
-      params: {
-        launch_success: successfulLaunch,
-        land_success: successfulLanding,
-        launch_year: launchYear,
-      },
-    });
-    setData(result.data);
-  };
+  // const fetchmissionData = async () => {
+  //   const result = await axios.get(url, {
+  //     params: {
+  //       launch_success: successfulLaunch,
+  //       land_success: successfulLanding,
+  //       launch_year: launchYear,
+  //     },
+  //   });
+  //   setData(result.data);
+  // };
 
   const [launchYear, setLaunchYear] = useState(null);
   const [successfulLanding, setSuccessfulLanding] = useState(null);
@@ -25,8 +23,6 @@ export default () => {
   const [data, setData] = useState(null);
 
   const onChangeHandler = (event, heading) => {
-    console.log(event.target.value);
-    console.log(heading);
     const { value } = event.target;
     switch (heading) {
       case "Launch Year":
@@ -41,12 +37,21 @@ export default () => {
       default:
         break;
     }
-
-    fetchmissionData();
   };
 
   useEffect(() => {
-    fetchmissionData();
+    const fetchData = async () => {
+      const result = await axios.get(`https://api.spaceXdata.com/v3/launches`, {
+        params: {
+          limit: 100,
+          launch_success: successfulLaunch,
+          land_success: successfulLanding,
+          launch_year: launchYear,
+        },
+      });
+      setData(result.data);
+    };
+    fetchData();
   }, [successfulLaunch, successfulLanding, launchYear]);
   return (
     <div className="containerWrapper">
