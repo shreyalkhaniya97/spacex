@@ -6,4 +6,4 @@ Step 4: Run `yarn start`.<br />
 Step 5: Open localhost:3000 in your browser.<br />
 Step 6: Done.<br />
 
-## Heroku Link: https://fast-basin-17993.herokuapp.com/
+### Heroku Link: https://fast-basin-17993.herokuapp.com/
