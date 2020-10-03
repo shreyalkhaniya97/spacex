@@ -1,0 +1,28 @@
+.filterContainer {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0px 10px 10px 10px;
+  padding: 15px;
+  .filterHeading {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .headingWrapper {
+    border-bottom: 1px solid black;
+    width: 140px;
+    margin: 0 auto;
+    .heading {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 2px;
+      font-weight: 200;
+    }
+  }
+  .filterWrapper {
+    justify-content: space-around;
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}

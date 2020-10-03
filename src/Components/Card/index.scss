@@ -1,0 +1,54 @@
+.cardWrapper {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 0px 10px 10px 10px;
+  .iconWrapper {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      width: 160px;
+      height: 165px;
+      object-fit: cover;
+    }
+  }
+  .cardInfo {
+    .cardName {
+      color: #3f51b5;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .missionInfo {
+      .missionHeadingList {
+        padding: 0px;
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
+
+        .missionId {
+          color: #3949ab;
+          font-size: 15px;
+          padding-left: 20px;
+          list-style-type: none;
+          font-weight: 200;
+        }
+      }
+      .missionHeading {
+        color: black;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .missionId {
+        color: #3949ab;
+        font-size: 14px;
+        font-weight: 200;
+        margin-left: 5px;
+      }
+    }
+  }
+}

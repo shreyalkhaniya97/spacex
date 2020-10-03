@@ -1,0 +1,17 @@
+.buttonWrapper {
+  margin: 5px 0px;
+  .button {
+    width: 60px;
+    background-color: #c5e1a5;
+    border: #9ccc65;
+    border-radius: 5px;
+    color: #424242;
+    padding: 5px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .active {
+    background-color: #9ccc65;
+  }
+}
