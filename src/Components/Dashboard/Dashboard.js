@@ -5,17 +5,6 @@ import SideBar from "../Sidebar/Sidebar";
 import "./index.scss";
 
 export default () => {
-  // const fetchmissionData = async () => {
-  //   const result = await axios.get(url, {
-  //     params: {
-  //       launch_success: successfulLaunch,
-  //       land_success: successfulLanding,
-  //       launch_year: launchYear,
-  //     },
-  //   });
-  //   setData(result.data);
-  // };
-
   const [launchYear, setLaunchYear] = useState(null);
   const [successfulLanding, setSuccessfulLanding] = useState(null);
   const [successfulLaunch, setSuccessfulLaunch] = useState(null);
@@ -26,13 +15,25 @@ export default () => {
     const { value } = event.target;
     switch (heading) {
       case "Launch Year":
-        setLaunchYear(value);
+        if (value === launchYear) {
+          setLaunchYear(null);
+        } else {
+          setLaunchYear(value);
+        }
         break;
       case "Successful Launch":
-        setSuccessfulLaunch(value);
+        if (value === successfulLaunch) {
+          setSuccessfulLaunch(null);
+        } else {
+          setSuccessfulLaunch(value);
+        }
         break;
       case "Successful Landing":
-        setSuccessfulLanding(value);
+        if (value === successfulLanding) {
+          setSuccessfulLanding(null);
+        } else {
+          setSuccessfulLanding(value);
+        }
         break;
       default:
         break;
